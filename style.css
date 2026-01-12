@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
 body{
-    background-image:url(Images/chuva.png);
-    background-size: cover;
-    background-position: center;
+    font-family: 'Manjari', sans-serif;
 }
+
+:root {
+    --theme: #f20c0cff;
+}
+
+.text-theme { color: var(--theme) !important; }
+.border-theme { border-color: var(--theme) !important; }
+
+.theme-pink{ --theme: #EAB0C8; }

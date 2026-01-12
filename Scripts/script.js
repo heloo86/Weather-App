@@ -30,15 +30,15 @@ async function searchWeather(){
 
             const finalData = {
                 city: data.name,
-                temperature: data.main.temp,
+                temperature: Math.round(data.main.temp),
                 description: data.weather[0].description
             }
 
             cityName.textContent = finalData.city;
-            temperature.textContent = `Temperature: ${finalData.temperature}°C`;
-            description.textContent = `Description: ${finalData.description}`;
+            temperature.textContent = `${finalData.temperature}°C`;
+            description.textContent = `${finalData.description}`;
             weatherResult.classList.remove('hidden');
-            
+
         } else {
             errorMessage.classList.remove('hidden');
         }
@@ -46,10 +46,13 @@ async function searchWeather(){
         alert( erro )
     
     } finally {
-        submitButton.textContent = 'Buscar'
         submitButton.disabled = false;
     }
 } 
 
 submitButton.addEventListener('click', searchWeather);
-
+cityInput.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter'){
+        searchWeather();
+    }
+});
