@@ -1,6 +1,8 @@
 const cityInput = document.getElementById('cityInput');
 const submitButton = document.getElementById('submit');
 const weatherResult = document.getElementById('weatherResult');
+const temperature = document.getElementById('temperature');
+const description = document.getElementById('description');
 const errorMessage = document.getElementById('errorMessage');
 const cityName = document.getElementById('cityName');
 
@@ -28,10 +30,15 @@ async function searchWeather(){
 
             const finalData = {
                 city: data.name,
+                temperature: data.main.temp,
+                description: data.weather[0].description
             }
 
             cityName.textContent = finalData.city;
+            temperature.textContent = `Temperature: ${finalData.temperature}°C`;
+            description.textContent = `Description: ${finalData.description}`;
             weatherResult.classList.remove('hidden');
+            
         } else {
             errorMessage.classList.remove('hidden');
         }
