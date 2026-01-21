@@ -34,6 +34,7 @@ async function searchWeather(){
     submitButton.disabled = true;
     weatherResult.classList.add('hidden');
     errorMessage.classList.add('hidden');
+    forecast.classList.add('hidden');
 
     const request = `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`;
 

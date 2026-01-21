@@ -12,27 +12,21 @@
         <div class="flex flex-col items-center mt-8 mx-auto w-[90%] max-w-[1100px]">
             <form class="border-b border-theme flex items-center w-full">
                 <div class="text-base flex-1">
-                    <input 
-                        type="text" 
-                        id="cityInput" 
-                        name="city" 
-                        class="bg-transparent border-none outline-none" 
-                        placeholder="Enter city name"
-                    />
+                    <input type="text" id="cityInput" name="city" class="bg-transparent border-none outline-none" placeholder="Enter city name" />
                 </div>
                 <button id="submit" type="button" class="p-2 text-theme">
                     <i data-lucide="search" class="w-6 h-6"></i>
                 </button>
             </form>
 
-            <div id="weatherResult" class="flex justify-center items-center gap-4 md:gap-8 mt-8 p-4 w-full max-w-[500px] text-theme hidden">
+            <div id="weatherResult" class="flex justify-center items-center md:gap-8 mt-8 p-4 w-full max-w-[500px] text-theme hidden">
                 <div class="flex flex-col items-center gap-[0.3em] text-4xl w-20 md:w-32 flex-shrink-0">
                     <p id="cityName" class="hidden"></p>
                     <i id="weatherIcon" class=""></i>
                     <p id="description" class="text-[12px] md:text-[14px] max-w-[80px] md:max-w-[100px] break-words text-center leading-none md:mt-0.5"></p>
                 </div>
                 <div class="flex-1 flex items-center justify-center">
-                    <p id="temperature" class="mt-8 font-medium text-[100px] md:text-[150px] text-center leading-none self-center"></p>  
+                    <p id="temperature" class="mt-8  font-medium text-[100px] md:text-[150px] text-center leading-none self-center"></p>  
                 </div>
             </div>
 
@@ -48,21 +42,21 @@
             </div>
 
             <div class="flex justify-between border-t border-theme pt-4 gap-8 overflow-x-auto w-full">
-                <p id="weekDay0">Today</p>
-                <p id="dayTemp0">20°C - 25°C</p> 
+                <p id="weekDay0"></p>
+                <p id="dayTemp0"></p> 
             </div> 
 
             <div class="flex justify-between border-t border-theme mt-4 pt-4 gap-8 overflow-x-auto w-full">
-                <p id="weekDay1">Moonday</p>
-                <p id="dayTemp1">20°C - 25°C</p>
+                <p id="weekDay1"></p>
+                <p id="dayTemp1"></p>
             </div>
             <div class="flex justify-between border-t border-theme mt-4 pt-4 gap-8 overflow-x-auto w-full">
-                <p id="weekDay2">Moonday</p>
-                <p id="dayTemp2">20°C - 25°C</p>
+                <p id="weekDay2"></p>
+                <p id="dayTemp2"></p>
             </div>
             <div class="flex justify-between border-t border-theme mt-4 pt-4 gap-8 overflow-x-auto w-full">
-                <p id="weekDay3">Moonday</p>
-                <p id="dayTemp3">20°C - 25°C</p>
+                <p id="weekDay3"></p>
+                <p id="dayTemp3"></p>
             </div>
         </div>
     </container>
