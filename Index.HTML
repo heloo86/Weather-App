@@ -42,21 +42,27 @@
         </div>
     </container>
     <container >
-        <div class="flex flex-col mx-auto w-[90%] max-w-[1100px] text-theme md:text-lg">
+        <div id="nextDaysForecast" class="flex flex-col mx-auto w-[90%] max-w-[1100px] text-theme md:text-lg hidden">
             <div>
-                <h3 class="text-lg md:text-2xl mt-10">Next three days</h3>
+                <h3 class="text-lg md:text-2xl mt-10">Next days forecast</h3>
             </div>
+
             <div class="flex justify-between border-t border-theme pt-4 gap-8 overflow-x-auto w-full">
+                <p id="weekDay0">Today</p>
+                <p id="dayTemp0">20°C - 25°C</p> 
+            </div> 
+
+            <div class="flex justify-between border-t border-theme mt-4 pt-4 gap-8 overflow-x-auto w-full">
                 <p id="weekDay1">Moonday</p>
-                <p id="weekTemp1">20°C - 25°C</p>
+                <p id="dayTemp1">20°C - 25°C</p>
             </div>
             <div class="flex justify-between border-t border-theme mt-4 pt-4 gap-8 overflow-x-auto w-full">
                 <p id="weekDay2">Moonday</p>
-                <p id="weekTemp2">20°C - 25°C</p>
+                <p id="dayTemp2">20°C - 25°C</p>
             </div>
             <div class="flex justify-between border-t border-theme mt-4 pt-4 gap-8 overflow-x-auto w-full">
                 <p id="weekDay3">Moonday</p>
-                <p id="weekTemp3">20°C - 25°C</p>
+                <p id="dayTemp3">20°C - 25°C</p>
             </div>
         </div>
     </container>
