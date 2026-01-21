@@ -9,6 +9,8 @@ const cityName = document.getElementById('cityName');
 const API_KEY = '1d72351d9b88f37f26980c4425fdc660';
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
+import { getWeatherIconClass, updateIcon } from './icon-maneger.js';
+
 async function searchWeather(){
     const city = cityInput.value.trim();
 
@@ -20,13 +22,15 @@ async function searchWeather(){
     weatherResult.classList.add('hidden');
     errorMessage.classList.add('hidden');
 
-    const request = `${API_URL}?q=${city}&appid=${API_KEY}&units=metric&lang=pt_br`;
+    const request = `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`;
 
     try{
         const response = await fetch(request);
         const data = await response.json();
 
         if(response.ok){
+
+            updateIcon(data.weather[0].id);
 
             const finalData = {
                 city: data.name,

@@ -5,7 +5,7 @@ body{
 }
 
 :root {
-    --theme: #f20c0cff;
+    --theme: #00000;
 }
 
 .text-theme { color: var(--theme) !important; }
